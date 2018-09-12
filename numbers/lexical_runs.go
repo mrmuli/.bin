@@ -50,6 +50,7 @@ func ActualAge() {
 	var input float64
 	fmt.Scanf("%f", &input)
 	age := input / 31557600
+	
 
 	fmt.Println("actual age in years is: ", age)
 }
