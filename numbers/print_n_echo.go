@@ -14,4 +14,23 @@ func main() {
 	fmt.Println(!(false && false) || (false && true))
 	fmt.Println(true || false)
 	fmt.Println("choc chip"[1])
+
+	var x string 
+	x = "Hello"
+	fmt.Println(x)
+	x = "why now"
+	x += " ?"
+	fmt.Println(x)
+
+	var y string = "hello"
+	var z string = "hello"
+	var k string = "acdce"
+	fmt.Println(y == z) 
+	fmt.Println(y == k)
+
+	j := "peanut"
+	l := "butter"
+	pbj := j + " " + l + " n jelly"
+	fmt.Println(j + " " + l)
+	fmt.Println(pbj)
 }
