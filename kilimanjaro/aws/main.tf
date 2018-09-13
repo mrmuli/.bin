@@ -1,6 +1,6 @@
 provider "aws" {
     access_key = "secretsauce"
-    secret_key = "saucetisecret"
+    secret_key = "casper"
     region     = "${var.region}"
   
 }

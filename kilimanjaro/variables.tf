@@ -11,6 +11,3 @@ variable "internal_port" {
 variable "external_port" {
     default = "8080"
 }
-
-
-
