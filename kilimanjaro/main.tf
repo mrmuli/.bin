@@ -4,7 +4,6 @@ provider "aws" {
     region     = "us-east-2"
   
 }
-
 resource "aws_instance" "kilima_one" {
     ami           = "ami-2757f631"
     instance_type = "t2.micro"
@@ -16,14 +15,14 @@ resource "aws_instance" "kilima_two" {
   
 }
 resource "docker_image" "kilimanjaro_image" {
-    name = "josephmuli/simple_nginx:0.0.2"
+    name = "${var.image_name}"
 }
 
 resource "docker_container" "kilimanjaro" {
-    name  = "kilimanjaro_container" 
+    name  = "${var.container_name}" 
     image = "${docker_image.kilimanjaro_image.latest}"
     ports {
-        internal = "8080"
-        external = "8080"
+        internal = "${var.internal_port}"
+        external = "${var.external_port}"
     }
 }
