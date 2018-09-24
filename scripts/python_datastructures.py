@@ -5,9 +5,9 @@
 
 def sample():
     """
-    Loop through even number range 1 though 11 and multiply by 2 
+    Loop through number range 1 though 11 and multiply by 2 
     """
-    for number in range(1,11): 
+    for number in range(1,11): # to be explicit about even numbers, you can add a step to range as: range(2,11,2) 
         # If the number is 4, exit the loop 
         if number == 4: 
             pass
