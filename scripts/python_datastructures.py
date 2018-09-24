@@ -7,15 +7,17 @@ def sample():
     """
     Loop through number range 1 though 11 and multiply by 2 
     """
-    for number in range(1,11): # to be explicit about even numbers, you can add a step to range as: range(2,11,2) 
-        # If the number is 4, exit the loop 
+    total = 0
+    for number in range(2,101,2): # to be explicit about even numbers, you can add a step to range as: range(2,11,2) 
+        # If the number is 4, skip and continue
         if number == 4: 
-            pass
+             continue
+        total += number
 
         # Calculate the product of number and 2 
         product = number * 2 
         # Print out the product in a friendly way 
-        print(number, '* 2 = ', product) 
+        print(number, '* 2 = ', product)
 
 # sample()
 
@@ -37,3 +39,30 @@ def password_authenticate():
     print("bye!")
 
 # password_authenticate()
+
+
+# use of pass, continue and break
+def statements_demo():
+    for number in range(0,200):
+        if number == 0:
+            continue
+        elif number % 3 != 0:
+            continue
+        elif type(number) != int:
+            break
+        else:
+            pass
+        print(number)
+            
+
+# statements_demo()
+
+
+def nested_example():
+    for even in range(2,11,2):
+        for odd in range(1,11,2):
+            val = even + odd
+            print(even, "+", odd, "=", val)
+        print(val)
+
+nested_example()
