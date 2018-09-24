@@ -3,20 +3,22 @@
 # articles and random examples, makes it easier for me to track on GitHub.
 # Feel free to use what you want, I'll try to document as much as I can :)
 
+
 def sample():
     """
     Loop through number range 1 though 11 and multiply by 2 
     """
     total = 0
-    for number in range(2,101,2): # to be explicit about even numbers, you can add a step to range as: range(2,11,2) 
+    # to be explicit about even numbers, you can add a step to range as: range(2,11,2)
+    for number in range(2, 101, 2):
         # If the number is 4, skip and continue
-        if number == 4: 
-             continue
+        if number == 4:
+            continue
         total += number
 
-        # Calculate the product of number and 2 
-        product = number * 2 
-        # Print out the product in a friendly way 
+        # Calculate the product of number and 2
+        product = number * 2
+        # Print out the product in a friendly way
         print(number, '* 2 = ', product)
 
 # sample()
@@ -28,7 +30,7 @@ def password_authenticate():
     """
     # set random value and Boolean check. (This is subject to change, on preference.)
     user_pass = "potato"
-    valid =  False
+    valid = False
     while not valid:
         password = input("Please enter your password: ")
         if password == user_pass:
@@ -40,10 +42,11 @@ def password_authenticate():
 
 # password_authenticate()
 
-
 # use of pass, continue and break
+
+
 def statements_demo():
-    for number in range(0,200):
+    for number in range(0, 200):
         if number == 0:
             continue
         elif number % 3 != 0:
@@ -53,16 +56,25 @@ def statements_demo():
         else:
             pass
         print(number)
-            
+
 
 # statements_demo()
 
-
 def nested_example():
-    for even in range(2,11,2):
-        for odd in range(1,11,2):
+    for even in range(2, 11, 2):
+        for odd in range(1, 11, 2):
             val = even + odd
             print(even, "+", odd, "=", val)
         print(val)
 
-nested_example()
+# nested_example()
+
+
+def randome_args(*args):
+    for value in args:
+        if type(value) == int:
+            continue
+        print(value)
+
+
+# randome_args(1,2,3,4,"five","six","seven",8,"nine",10)
