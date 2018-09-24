@@ -6,7 +6,7 @@
 
 def sample():
     """
-    Loop through number range 1 though 11 and multiply by 2 
+    Loop through number range 1 though 11 and multiply by 2
     """
     total = 0
     # to be explicit about even numbers, you can add a step to range as: range(2,11,2)
